@@ -1,12 +1,13 @@
 cmake_minimum_required(VERSION 3.21)
 project(exciton)
-
+set(TARGET_NAME Exciton)
 ############
 # Project CI
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../../cmake")
 
 include(CheckIsRoot)
 check_project_is_root(${CMAKE_PROJECT_NAME}_IS_ROOT)
+check_target_is_root(${TARGET_NAME}_IS_ROOT ${TARGET_NAME}_IS_ROOT_AND_NOT_EMS)
 
 option(${CMAKE_PROJECT_NAME}_CI "We are running on CI. May change certain defaults." OFF)
 if (${CMAKE_PROJECT_NAME}_CI)

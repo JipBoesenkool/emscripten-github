@@ -80,7 +80,7 @@ jobs:
             -S apps/${{ github.event.inputs.project }} \
             -B apps/${{ github.event.inputs.project }}/build \
             -DCMAKE_BUILD_TYPE=${{ matrix.config.build_type }} \
-            -D${{ github.event.inputs.project }}_CI=ON \
+            -DGITHUB_CI=ON \
             -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
             -G "${{ matrix.config.generators }}"
 
@@ -96,7 +96,7 @@ jobs:
             -DCMAKE_BUILD_TYPE=${{ matrix.config.build_type }} \
             -DCMAKE_C_COMPILER_LAUNCHER=ccache \
             -DCMAKE_CXX_COMPILER_LAUNCHER=ccache \
-            -D${{ github.event.inputs.project }}_CI=ON \
+            -DGITHUB_CI=ON \
             -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
             -G "${{ matrix.config.generators }}"
 
@@ -110,7 +110,7 @@ jobs:
             -S apps/${{ github.event.inputs.project }} \
             -B apps/${{ github.event.inputs.project }}/build \
             -DCMAKE_BUILD_TYPE=${{ matrix.config.build_type }} \
-            -D${{ github.event.inputs.project }}_CI=ON \
+            -DGITHUB_CI=ON \
             -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
             -G "${{ matrix.config.generators }}"
 
