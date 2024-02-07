@@ -29,8 +29,6 @@ option(GITHUB_CI "We are running on CI. May change certain defaults." OFF)
 option(DOWNLOAD_CPM "Download CPM. Disable if you're providing your own version of CPM" ON)
 option(WARNINGS_AS_ERRORS "Treat warnings as errors" ${GITHUB_CI})
 
-//TODO test and cleanup
-
 process_options(${TARGET_NAME})
 ################################################################################
 # Dependencies
