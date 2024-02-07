@@ -4,3 +4,7 @@
 3. access the website on https://jipboesenkool.github.io/emscripten-github/
 
 # TODO
+- Clean up CMake scripts
+  - fetch into cmake/libs
+  - project pipeline into cmake/project
+- Setup the other platforms because we can test them for free on this public repo

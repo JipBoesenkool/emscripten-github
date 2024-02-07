@@ -18,7 +18,7 @@ if (NOT CPM_SOURCE_CACHE)
     set(CPM_SOURCE_CACHE "${CMAKE_CURRENT_SOURCE_DIR}/../../.cpmcache")
 endif()
 
-add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/../../deps" "${CMAKE_CURRENT_BINARY_DIR}/deps")
+add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/../../libs" "${CMAKE_CURRENT_BINARY_DIR}/libs")
 
 if (${CMAKE_PROJECT_NAME}_IS_ROOT)
     message(STATUS "${CMAKE_PROJECT_NAME} is root")
