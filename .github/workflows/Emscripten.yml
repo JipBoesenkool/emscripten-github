@@ -1,0 +1,191 @@
+name: Emscripten
+
+on:
+    workflow_dispatch:
+      inputs:
+        project:
+          type: string
+          description: What application to build    
+  
+jobs:
+  build:
+    name: ${{ matrix.config.name }}
+    runs-on: ${{ matrix.config.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        config:
+        - {
+            name: "ubuntu-emscripten",
+            os: ubuntu-latest,
+            build_type: "Release",
+            cc: "emcc",
+            cxx: "em++",
+            generators: "Ninja",
+            ccache: "OFF",
+            code_coverage: "OFF",
+            clang_format: "OFF",
+          }
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Print env
+        run: |
+          echo github.event.action: ${{ github.event.action }}
+          echo github.event_name: ${{ github.event_name }}
+
+      - name: ccache
+        if: startsWith(matrix.config.ccache, 'ON')
+        uses: hendrikmuhs/ccache-action@v1
+        with:
+          key: ${{ matrix.os }}-${{ matrix.build_type }}
+          max-size: 500M
+
+      - name: CPM Cache
+        id: cache-cpm
+        uses: actions/cache@v2
+        with:
+          path: $GITHUB_WORKSPACE/.cpmcache
+          key: ${{ matrix.os }}-cpm-${{ hashFiles('**/') }}
+          restore-keys: |
+            ${{ matrix.os }}-cpm-
+
+      - uses: mymindstorm/setup-emsdk@v9
+        if: contains(matrix.config.name, 'emscripten')
+
+      - name: print emscripten version
+        if: contains(matrix.config.name, 'emscripten')
+        run: |
+          emcc --version
+
+      - name: Install dependencies on ubuntu
+        if: startsWith(matrix.config.name, 'ubuntu')
+        run: |
+          sudo apt-get update --fix-missing
+          sudo apt-get install ninja-build
+          sudo apt-get install libgles2-mesa-dev
+          ninja --version
+          cmake --version
+          gcc --version
+          clang --version
+
+      - name: Configure (EMSCRIPTEN)
+        if: contains(matrix.config.name, 'emscripten')
+        shell: bash
+        run: |
+          export CC=${{ matrix.config.CC }}
+          export CXX=${{ matrix.config.CXX }}
+          emcmake \
+            cmake \
+            -S apps/${{ github.event.inputs.project }} \
+            -B apps/${{ github.event.inputs.project }}/build \
+            -DCMAKE_BUILD_TYPE=${{ matrix.config.build_type }} \
+            -D${{ github.event.inputs.project }}_CI=ON \
+            -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
+            -G "${{ matrix.config.generators }}"
+
+      - name: Configure (CCACHE)
+        if: startsWith(matrix.config.ccache, 'ON')
+        shell: bash
+        run: |
+          export CC=${{ matrix.config.CC }}
+          export CXX=${{ matrix.config.CXX }}
+          cmake \
+            -S apps/${{ github.event.inputs.project }} \
+            -B apps/${{ github.event.inputs.project }}/build \
+            -DCMAKE_BUILD_TYPE=${{ matrix.config.build_type }} \
+            -DCMAKE_C_COMPILER_LAUNCHER=ccache \
+            -DCMAKE_CXX_COMPILER_LAUNCHER=ccache \
+            -D${{ github.event.inputs.project }}_CI=ON \
+            -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
+            -G "${{ matrix.config.generators }}"
+
+      - name: Configure
+        if: startsWith(matrix.config.ccache, 'OFF')
+        shell: bash
+        run: |
+          export CC=${{ matrix.config.CC }}
+          export CXX=${{ matrix.config.CXX }}
+          cmake \
+            -S apps/${{ github.event.inputs.project }} \
+            -B apps/${{ github.event.inputs.project }}/build \
+            -DCMAKE_BUILD_TYPE=${{ matrix.config.build_type }} \
+            -D${{ github.event.inputs.project }}_CI=ON \
+            -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
+            -G "${{ matrix.config.generators }}"
+
+      - name: Build
+        shell: bash
+        run: cmake --build apps/${{ github.event.inputs.project }}/build --config ${{ matrix.config.build_type }}
+
+      - name: Install Strip
+        shell: bash
+        run: |
+          mkdir -p instdir
+          cmake --install apps/${{ github.event.inputs.project }}/build --strip --prefix=instdir
+
+      - name: Prepare Github Page
+        shell: bash
+        if: contains(matrix.config.name, 'emscripten')
+        run: |
+          mv apps/${{ github.event.inputs.project }}/build/src/${{ github.event.inputs.project }}.html apps/${{ github.event.inputs.project }}/build/src/index.html
+          rm -rf apps/${{ github.event.inputs.project }}/build/src/CMakeFiles
+          rm -f apps/${{ github.event.inputs.project }}/build/src/cmake_install.cmake
+
+      - name: Deploy Github Page
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        if: contains(matrix.config.name, 'emscripten')
+        with:
+          branch: gh-pages-${{ github.event.inputs.project }}
+          folder: apps/${{ github.event.inputs.project }}/build/src/
+
+      - name: Pack
+        shell: bash
+        working-directory: instdir
+        if: always()
+        run: |
+          ls -laR
+          7z a ../${{ matrix.config.name }}.7z .
+
+      - name: Upload Build Developer Logs
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: 'z-${{ matrix.config.name }}-build_dev_logs'
+          path: |
+            ./apps/${{ github.event.inputs.project }}/build/**/*.txt
+            ./apps/${{ github.event.inputs.project }}/build/**/*.gcda
+            ./apps/${{ github.event.inputs.project }}/build/**/*.gcno
+            ./apps/${{ github.event.inputs.project }}/build/**/*codecov*
+            ./apps/${{ github.event.inputs.project }}/build/**/*.xml
+            ./apps/${{ github.event.inputs.project }}/build/**/*.cmake
+            ./apps/${{ github.event.inputs.project }}/build/**/*.log
+            ./apps/${{ github.event.inputs.project }}/build/**/*.json
+            ./apps/${{ github.event.inputs.project }}/build/**/*.gcov
+            ./apps/${{ github.event.inputs.project }}/build/**/*.info
+            ./apps/${{ github.event.inputs.project }}/build/**/.*
+            ./apps/${{ github.event.inputs.project }}/build/**/*.h
+            ./apps/${{ github.event.inputs.project }}/build/**/*.hpp
+            ./apps/${{ github.event.inputs.project }}/build/**/*.c
+            ./apps/${{ github.event.inputs.project }}/build/**/*.cpp
+            !./apps/${{ github.event.inputs.project }}/build/_deps
+            !*/.git/**/*
+          retention-days: 1
+
+      - name: Upload
+        if: always()
+        uses: actions/upload-artifact@v1
+        with:
+          path: ./${{ matrix.config.name }}.7z
+          name: ${{ matrix.config.name }}.7z
+
+      - name: Upload release asset
+        if: github.event_name == 'release' && (github.event.action == 'published' || github.event.action == 'created')
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: ./${{ matrix.config.name }}.7z
+          asset_name: ${{ matrix.config.name }}.7z.zip
+          asset_content_type: application/zip
