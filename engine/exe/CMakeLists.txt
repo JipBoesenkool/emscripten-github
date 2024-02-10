@@ -43,8 +43,8 @@ add_subdirectory("src")
 ###################
 # Builds tests
 if (${CMAKE_PROJECT_NAME}_EXAMPLES)
-    message(STATUS "${CMAKE_PROJECT_NAME} Examples Enabled")
-    add_subdirectory(examples)
+    message(STATUS "${TARGET_NAME} Examples Enabled")
+    #add_subdirectory(examples)
 endif()
 
 ###################
