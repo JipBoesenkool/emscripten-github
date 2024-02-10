@@ -1,6 +1,7 @@
-include(SetSystemIncludes)
-include(CompilerWarnings)
+include(project/SetSystemIncludes)
+include(project/CompilerWarnings)
 
+#lua
 CPMAddPackage(
   NAME lua
   GIT_REPOSITORY https://github.com/lua/lua.git
@@ -21,6 +22,7 @@ if(lua_ADDED)
   source_group(TREE ${lua_SOURCE_DIR} FILES ${lua_sources})
 endif()
 
+#sol2
 CPMAddPackage(
   NAME sol2
   GIT_REPOSITORY https://github.com/ThePhD/sol2.git
@@ -30,11 +32,4 @@ CPMAddPackage(
     "SOL2_BUILD_LUA FALSE"
 )
 
-# set_property(TARGET sol2 PROPERTY CXX_STANDARD_REQUIRED TRUE)
-# set_property(TARGET sol2 PROPERTY CXX_STANDARD 17)
-# set_property(TARGET sol2 PROPERTY CXX_EXTENSIONS OFF)
-
-# set_target_properties(sol2 PROPERTIES FOLDER dependencies)
-
-# get_target_property(sol2_SOURCES sol2 SOURCES)
-# source_group(TREE ${sol2_SOURCE_DIR} FILES ${sol2_SOURCES})
+set_target_properties(sol2 PROPERTIES FOLDER dependencies)
