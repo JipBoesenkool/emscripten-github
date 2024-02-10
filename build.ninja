@@ -52,7 +52,7 @@ build cmake_object_order_depends_target_TemplateApp: phony || cmake_object_order
 build CMakeFiles/TemplateApp.dir/src/main.cpp.o: CXX_COMPILER__TemplateApp_unscanned_Release /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/src/main.cpp || cmake_object_order_depends_target_TemplateApp
   DEP_FILE = CMakeFiles/TemplateApp.dir/src/main.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=c++20 -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -Wdouble-promotion -Wformat=2 -Werror -sUSE_SDL=2 -sUSE_FREETYPE=1
-  INCLUDES = -I/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/src/public -I/home/runner/work/emscripten-github/emscripten-github/engine/exe/src/public -isystem /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src
+  INCLUDES = -I/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/src/public -I/home/runner/work/emscripten-github/emscripten-github/exe/src/public -isystem /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src
   OBJECT_DIR = CMakeFiles/TemplateApp.dir
   OBJECT_FILE_DIR = CMakeFiles/TemplateApp.dir/src
 
@@ -145,109 +145,6 @@ build install/strip: phony CMakeFiles/install/strip.util
 # /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/CMakeLists.txt
 # =============================================================================
 
-# =============================================================================
-# Object build statements for STATIC_LIBRARY target glad
-
-
-#############################################
-# Order-only phony target for glad
-
-build cmake_object_order_depends_target_glad: phony || libs/CMakeFiles/glad.dir
-
-build libs/CMakeFiles/glad.dir/glad/glad.c.o: C_COMPILER__glad_unscanned_Release /home/runner/work/emscripten-github/emscripten-github/libs/glad/glad.c || cmake_object_order_depends_target_glad
-  DEP_FILE = libs/CMakeFiles/glad.dir/glad/glad.c.o.d
-  FLAGS = -O3 -DNDEBUG -w
-  INCLUDES = -isystem /home/runner/work/emscripten-github/emscripten-github/libs
-  OBJECT_DIR = libs/CMakeFiles/glad.dir
-  OBJECT_FILE_DIR = libs/CMakeFiles/glad.dir/glad
-
-
-# =============================================================================
-# Link build statements for STATIC_LIBRARY target glad
-
-
-#############################################
-# Link the static library libs/libglad.a
-
-build libs/libglad.a: C_STATIC_LIBRARY_LINKER__glad_Release libs/CMakeFiles/glad.dir/glad/glad.c.o
-  LANGUAGE_COMPILE_FLAGS = -O3 -DNDEBUG
-  OBJECT_DIR = libs/CMakeFiles/glad.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = libs/libglad.a
-  TARGET_PDB = glad.a.dbg
-
-
-#############################################
-# Utility command for edit_cache
-
-build libs/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/libs && /usr/local/bin/ccmake -S/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp -B/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build
-  DESC = Running CMake cache editor...
-  pool = console
-  restat = 1
-
-build libs/edit_cache: phony libs/CMakeFiles/edit_cache.util
-
-
-#############################################
-# Utility command for rebuild_cache
-
-build libs/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/libs && /usr/local/bin/cmake --regenerate-during-build -S/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp -B/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build
-  DESC = Running CMake to regenerate build system...
-  pool = console
-  restat = 1
-
-build libs/rebuild_cache: phony libs/CMakeFiles/rebuild_cache.util
-
-
-#############################################
-# Utility command for list_install_components
-
-build libs/list_install_components: phony
-
-
-#############################################
-# Utility command for install
-
-build libs/CMakeFiles/install.util: CUSTOM_COMMAND libs/all
-  COMMAND = cd /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/libs && /usr/local/bin/cmake -P cmake_install.cmake
-  DESC = Install the project...
-  pool = console
-  restat = 1
-
-build libs/install: phony libs/CMakeFiles/install.util
-
-
-#############################################
-# Utility command for install/local
-
-build libs/CMakeFiles/install/local.util: CUSTOM_COMMAND libs/all
-  COMMAND = cd /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/libs && /usr/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-  DESC = Installing only the local directory...
-  pool = console
-  restat = 1
-
-build libs/install/local: phony libs/CMakeFiles/install/local.util
-
-
-#############################################
-# Utility command for install/strip
-
-build libs/CMakeFiles/install/strip.util: CUSTOM_COMMAND libs/all
-  COMMAND = cd /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/libs && /usr/local/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-  DESC = Installing the project stripped...
-  pool = console
-  restat = 1
-
-build libs/install/strip: phony libs/CMakeFiles/install/strip.util
-
-# =============================================================================
-# Write statements declared in CMakeLists.txt:
-# /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/CMakeLists.txt
-# =============================================================================
-
 
 #############################################
 # Utility command for edit_cache
@@ -316,78 +213,7 @@ build exe/install/strip: phony exe/CMakeFiles/install/strip.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /home/runner/work/emscripten-github/emscripten-github/engine/exe/CMakeLists.txt
-# =============================================================================
-
-
-#############################################
-# Utility command for edit_cache
-
-build exe/libs/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/exe/libs && /usr/local/bin/ccmake -S/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp -B/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build
-  DESC = Running CMake cache editor...
-  pool = console
-  restat = 1
-
-build exe/libs/edit_cache: phony exe/libs/CMakeFiles/edit_cache.util
-
-
-#############################################
-# Utility command for rebuild_cache
-
-build exe/libs/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/exe/libs && /usr/local/bin/cmake --regenerate-during-build -S/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp -B/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build
-  DESC = Running CMake to regenerate build system...
-  pool = console
-  restat = 1
-
-build exe/libs/rebuild_cache: phony exe/libs/CMakeFiles/rebuild_cache.util
-
-
-#############################################
-# Utility command for list_install_components
-
-build exe/libs/list_install_components: phony
-
-
-#############################################
-# Utility command for install
-
-build exe/libs/CMakeFiles/install.util: CUSTOM_COMMAND exe/libs/all
-  COMMAND = cd /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/exe/libs && /usr/local/bin/cmake -P cmake_install.cmake
-  DESC = Install the project...
-  pool = console
-  restat = 1
-
-build exe/libs/install: phony exe/libs/CMakeFiles/install.util
-
-
-#############################################
-# Utility command for install/local
-
-build exe/libs/CMakeFiles/install/local.util: CUSTOM_COMMAND exe/libs/all
-  COMMAND = cd /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/exe/libs && /usr/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-  DESC = Installing only the local directory...
-  pool = console
-  restat = 1
-
-build exe/libs/install/local: phony exe/libs/CMakeFiles/install/local.util
-
-
-#############################################
-# Utility command for install/strip
-
-build exe/libs/CMakeFiles/install/strip.util: CUSTOM_COMMAND exe/libs/all
-  COMMAND = cd /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/exe/libs && /usr/local/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-  DESC = Installing the project stripped...
-  pool = console
-  restat = 1
-
-build exe/libs/install/strip: phony exe/libs/CMakeFiles/install/strip.util
-
-# =============================================================================
-# Write statements declared in CMakeLists.txt:
-# /home/runner/work/emscripten-github/emscripten-github/engine/exe/CMakeLists.txt
+# /home/runner/work/emscripten-github/emscripten-github/exe/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -399,12 +225,12 @@ build exe/libs/install/strip: phony exe/libs/CMakeFiles/install/strip.util
 
 build cmake_object_order_depends_target_exe: phony || exe/src/CMakeFiles/exe.dir
 
-build exe/src/CMakeFiles/exe.dir/public/exe/Library.cpp.o: CXX_COMPILER__exe_unscanned_Release /home/runner/work/emscripten-github/emscripten-github/engine/exe/src/public/exe/Library.cpp || cmake_object_order_depends_target_exe
-  DEP_FILE = exe/src/CMakeFiles/exe.dir/public/exe/Library.cpp.o.d
-  FLAGS = -O3 -DNDEBUG -std=c++20 -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -Wdouble-promotion -Wformat=2
-  INCLUDES = -I/home/runner/work/emscripten-github/emscripten-github/engine/exe/src/public
+build exe/src/CMakeFiles/exe.dir/private/Library.cpp.o: CXX_COMPILER__exe_unscanned_Release /home/runner/work/emscripten-github/emscripten-github/exe/src/private/Library.cpp || cmake_object_order_depends_target_exe
+  DEP_FILE = exe/src/CMakeFiles/exe.dir/private/Library.cpp.o.d
+  FLAGS = -O3 -DNDEBUG -std=c++20 -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -Wdouble-promotion -Wformat=2 -Werror
+  INCLUDES = -I/home/runner/work/emscripten-github/emscripten-github/exe/src/public
   OBJECT_DIR = exe/src/CMakeFiles/exe.dir
-  OBJECT_FILE_DIR = exe/src/CMakeFiles/exe.dir/public/exe
+  OBJECT_FILE_DIR = exe/src/CMakeFiles/exe.dir/private
 
 
 # =============================================================================
@@ -414,7 +240,7 @@ build exe/src/CMakeFiles/exe.dir/public/exe/Library.cpp.o: CXX_COMPILER__exe_uns
 #############################################
 # Link the static library exe/src/libexe.a
 
-build exe/src/libexe.a: CXX_STATIC_LIBRARY_LINKER__exe_Release exe/src/CMakeFiles/exe.dir/public/exe/Library.cpp.o
+build exe/src/libexe.a: CXX_STATIC_LIBRARY_LINKER__exe_Release exe/src/CMakeFiles/exe.dir/private/Library.cpp.o
   LANGUAGE_COMPILE_FLAGS = -O3 -DNDEBUG
   OBJECT_DIR = exe/src/CMakeFiles/exe.dir
   POST_BUILD = :
@@ -579,7 +405,7 @@ build cmake_object_order_depends_target_TemplateApp_object: phony || cmake_objec
 build src/CMakeFiles/TemplateApp_object.dir/private/Game.cpp.o: CXX_COMPILER__TemplateApp_object_unscanned_Release /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/src/private/Game.cpp || cmake_object_order_depends_target_TemplateApp_object
   DEP_FILE = src/CMakeFiles/TemplateApp_object.dir/private/Game.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=c++20 -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -Wdouble-promotion -Wformat=2 -Werror -sUSE_SDL=2 -sUSE_FREETYPE=1
-  INCLUDES = -I/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/src/public -I/home/runner/work/emscripten-github/emscripten-github/engine/exe/src/public -isystem /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src
+  INCLUDES = -I/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/src/public -I/home/runner/work/emscripten-github/emscripten-github/exe/src/public -isystem /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src
   OBJECT_DIR = src/CMakeFiles/TemplateApp_object.dir
   OBJECT_FILE_DIR = src/CMakeFiles/TemplateApp_object.dir/private
 
@@ -665,13 +491,9 @@ build TemplateApp_object: phony src/TemplateApp_object
 
 build exe: phony exe/src/libexe.a
 
-build glad: phony libs/libglad.a
-
 build imgui: phony src/libimgui.a
 
 build libexe.a: phony exe/src/libexe.a
-
-build libglad.a: phony libs/libglad.a
 
 build libimgui.a: phony src/libimgui.a
 
@@ -683,21 +505,14 @@ build libimgui.a: phony src/libimgui.a
 #############################################
 # Folder: /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build
 
-build all: phony TemplateApp.html libs/all exe/all src/all
+build all: phony TemplateApp.html exe/all src/all
 
 # =============================================================================
 
 #############################################
 # Folder: /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/exe
 
-build exe/all: phony exe/libs/all exe/src/all
-
-# =============================================================================
-
-#############################################
-# Folder: /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/exe/libs
-
-build exe/libs/all: phony
+build exe/all: phony exe/src/all
 
 # =============================================================================
 
@@ -705,13 +520,6 @@ build exe/libs/all: phony
 # Folder: /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/exe/src
 
 build exe/src/all: phony exe/src/libexe.a
-
-# =============================================================================
-
-#############################################
-# Folder: /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/libs
-
-build libs/all: phony libs/libglad.a
 
 # =============================================================================
 
@@ -741,14 +549,14 @@ build /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/bui
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/CMakeFiles/cmake.verify_globs | /home/runner/work/_temp/48433a4c-a34a-44dd-b701-3c783fb71764/emsdk-master/upstream/emscripten/cmake/Modules/CMakeSystemSpecificInformation.cmake /home/runner/work/_temp/48433a4c-a34a-44dd-b701-3c783fb71764/emsdk-master/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake /home/runner/work/emscripten-github/emscripten-github/.cpmcache/cpm/CPM_0.32.0.cmake /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/CMakeLists.txt /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/CMakeFiles/VerifyGlobs.cmake /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/src/CMakeLists.txt /home/runner/work/emscripten-github/emscripten-github/cmake/.cpmcache/cpm/CPM_0.32.0.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/CheckIsRoot.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/CompilerWarnings.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/ConfigureTarget.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/DownloadCPM.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/SetSystemIncludes.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/libs/FetchIMGUI.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/project/CheckIsRoot.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/project/CompilerWarnings.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/project/ConfigureTarget.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/project/Options.cmake /home/runner/work/emscripten-github/emscripten-github/engine/exe/CMakeLists.txt /home/runner/work/emscripten-github/emscripten-github/engine/exe/src/CMakeLists.txt /home/runner/work/emscripten-github/emscripten-github/libs/CMakeLists.txt /usr/local/share/cmake-3.28/Modules/CMakeCInformation.cmake /usr/local/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/local/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/local/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/local/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/local/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/local/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/share/cmake-3.28/Modules/Compiler/Clang-C.cmake /usr/local/share/cmake-3.28/Modules/Compiler/Clang-CXX.cmake /usr/local/share/cmake-3.28/Modules/Compiler/Clang.cmake /usr/local/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/local/share/cmake-3.28/Modules/ExternalProject/shared_internal_commands.cmake /usr/local/share/cmake-3.28/Modules/FetchContent.cmake /usr/local/share/cmake-3.28/Modules/FetchContent/CMakeLists.cmake.in /usr/local/share/cmake-3.28/Modules/FindGit.cmake /usr/local/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /usr/local/share/cmake-3.28/Modules/FindPackageMessage.cmake CMakeCache.txt CMakeFiles/3.28.2/CMakeCCompiler.cmake CMakeFiles/3.28.2/CMakeCXXCompiler.cmake CMakeFiles/3.28.2/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/CMakeFiles/cmake.verify_globs | /home/runner/work/_temp/07955eed-30c7-4f86-81ce-eecf247fa329/emsdk-master/upstream/emscripten/cmake/Modules/CMakeSystemSpecificInformation.cmake /home/runner/work/_temp/07955eed-30c7-4f86-81ce-eecf247fa329/emsdk-master/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/CMakeLists.txt /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/CMakeFiles/VerifyGlobs.cmake /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/src/CMakeLists.txt /home/runner/work/emscripten-github/emscripten-github/cmake/.cpmcache/cpm/CPM_0.32.0.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/DownloadCPM.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/libs/FetchIMGUI.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/project/CheckIsRoot.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/project/CompilerWarnings.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/project/ConfigureTarget.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/project/Options.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/project/SetSystemIncludes.cmake /home/runner/work/emscripten-github/emscripten-github/exe/CMakeLists.txt /home/runner/work/emscripten-github/emscripten-github/exe/src/CMakeLists.txt /usr/local/share/cmake-3.28/Modules/CMakeCInformation.cmake /usr/local/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/local/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/local/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/local/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/local/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/local/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/share/cmake-3.28/Modules/Compiler/Clang-C.cmake /usr/local/share/cmake-3.28/Modules/Compiler/Clang-CXX.cmake /usr/local/share/cmake-3.28/Modules/Compiler/Clang.cmake /usr/local/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/local/share/cmake-3.28/Modules/ExternalProject/shared_internal_commands.cmake /usr/local/share/cmake-3.28/Modules/FetchContent.cmake /usr/local/share/cmake-3.28/Modules/FetchContent/CMakeLists.cmake.in /usr/local/share/cmake-3.28/Modules/FindGit.cmake /usr/local/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /usr/local/share/cmake-3.28/Modules/FindPackageMessage.cmake CMakeCache.txt CMakeFiles/3.28.2/CMakeCCompiler.cmake CMakeFiles/3.28.2/CMakeCXXCompiler.cmake CMakeFiles/3.28.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/runner/work/_temp/48433a4c-a34a-44dd-b701-3c783fb71764/emsdk-master/upstream/emscripten/cmake/Modules/CMakeSystemSpecificInformation.cmake /home/runner/work/_temp/48433a4c-a34a-44dd-b701-3c783fb71764/emsdk-master/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake /home/runner/work/emscripten-github/emscripten-github/.cpmcache/cpm/CPM_0.32.0.cmake /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/CMakeLists.txt /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/CMakeFiles/VerifyGlobs.cmake /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/src/CMakeLists.txt /home/runner/work/emscripten-github/emscripten-github/cmake/.cpmcache/cpm/CPM_0.32.0.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/CheckIsRoot.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/CompilerWarnings.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/ConfigureTarget.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/DownloadCPM.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/SetSystemIncludes.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/libs/FetchIMGUI.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/project/CheckIsRoot.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/project/CompilerWarnings.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/project/ConfigureTarget.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/project/Options.cmake /home/runner/work/emscripten-github/emscripten-github/engine/exe/CMakeLists.txt /home/runner/work/emscripten-github/emscripten-github/engine/exe/src/CMakeLists.txt /home/runner/work/emscripten-github/emscripten-github/libs/CMakeLists.txt /usr/local/share/cmake-3.28/Modules/CMakeCInformation.cmake /usr/local/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/local/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/local/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/local/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/local/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/local/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/share/cmake-3.28/Modules/Compiler/Clang-C.cmake /usr/local/share/cmake-3.28/Modules/Compiler/Clang-CXX.cmake /usr/local/share/cmake-3.28/Modules/Compiler/Clang.cmake /usr/local/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/local/share/cmake-3.28/Modules/ExternalProject/shared_internal_commands.cmake /usr/local/share/cmake-3.28/Modules/FetchContent.cmake /usr/local/share/cmake-3.28/Modules/FetchContent/CMakeLists.cmake.in /usr/local/share/cmake-3.28/Modules/FindGit.cmake /usr/local/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /usr/local/share/cmake-3.28/Modules/FindPackageMessage.cmake CMakeCache.txt CMakeFiles/3.28.2/CMakeCCompiler.cmake CMakeFiles/3.28.2/CMakeCXXCompiler.cmake CMakeFiles/3.28.2/CMakeSystem.cmake: phony
+build /home/runner/work/_temp/07955eed-30c7-4f86-81ce-eecf247fa329/emsdk-master/upstream/emscripten/cmake/Modules/CMakeSystemSpecificInformation.cmake /home/runner/work/_temp/07955eed-30c7-4f86-81ce-eecf247fa329/emsdk-master/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/CMakeLists.txt /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/CMakeFiles/VerifyGlobs.cmake /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/src/CMakeLists.txt /home/runner/work/emscripten-github/emscripten-github/cmake/.cpmcache/cpm/CPM_0.32.0.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/DownloadCPM.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/libs/FetchIMGUI.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/project/CheckIsRoot.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/project/CompilerWarnings.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/project/ConfigureTarget.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/project/Options.cmake /home/runner/work/emscripten-github/emscripten-github/cmake/project/SetSystemIncludes.cmake /home/runner/work/emscripten-github/emscripten-github/exe/CMakeLists.txt /home/runner/work/emscripten-github/emscripten-github/exe/src/CMakeLists.txt /usr/local/share/cmake-3.28/Modules/CMakeCInformation.cmake /usr/local/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/local/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/local/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/local/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/local/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/local/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/share/cmake-3.28/Modules/Compiler/Clang-C.cmake /usr/local/share/cmake-3.28/Modules/Compiler/Clang-CXX.cmake /usr/local/share/cmake-3.28/Modules/Compiler/Clang.cmake /usr/local/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/local/share/cmake-3.28/Modules/ExternalProject/shared_internal_commands.cmake /usr/local/share/cmake-3.28/Modules/FetchContent.cmake /usr/local/share/cmake-3.28/Modules/FetchContent/CMakeLists.cmake.in /usr/local/share/cmake-3.28/Modules/FindGit.cmake /usr/local/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /usr/local/share/cmake-3.28/Modules/FindPackageMessage.cmake CMakeCache.txt CMakeFiles/3.28.2/CMakeCCompiler.cmake CMakeFiles/3.28.2/CMakeCXXCompiler.cmake CMakeFiles/3.28.2/CMakeSystem.cmake: phony
 
 
 #############################################

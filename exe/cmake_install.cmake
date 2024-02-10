@@ -1,4 +1,4 @@
-# Install script for directory: /home/runner/work/emscripten-github/emscripten-github/engine/exe
+# Install script for directory: /home/runner/work/emscripten-github/emscripten-github/exe
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,11 +35,6 @@ endif()
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/usr/bin/objdump")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/exe/libs/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

@@ -18,26 +18,26 @@
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 
 //Emscripten ar
-CMAKE_AR:FILEPATH=/home/runner/work/_temp/48433a4c-a34a-44dd-b701-3c783fb71764/emsdk-master/upstream/emscripten/emar
+CMAKE_AR:FILEPATH=/home/runner/work/_temp/07955eed-30c7-4f86-81ce-eecf247fa329/emsdk-master/upstream/emscripten/emar
 
 //Choose the type of build, options are: None Debug Release RelWithDebInfo
 // MinSizeRel ...
 CMAKE_BUILD_TYPE:STRING=Release
 
 //No help, variable specified on the command line.
-CMAKE_CROSSCOMPILING_EMULATOR:UNINITIALIZED="/home/runner/work/_temp/48433a4c-a34a-44dd-b701-3c783fb71764/emsdk-master/node/14.15.5_64bit/bin/node"
+CMAKE_CROSSCOMPILING_EMULATOR:UNINITIALIZED="/home/runner/work/_temp/07955eed-30c7-4f86-81ce-eecf247fa329/emsdk-master/node/14.15.5_64bit/bin/node"
 
 //CXX compiler
-CMAKE_CXX_COMPILER:STRING=/home/runner/work/_temp/48433a4c-a34a-44dd-b701-3c783fb71764/emsdk-master/upstream/emscripten/em++
+CMAKE_CXX_COMPILER:STRING=/home/runner/work/_temp/07955eed-30c7-4f86-81ce-eecf247fa329/emsdk-master/upstream/emscripten/em++
 
 //Emscripten ar
-CMAKE_CXX_COMPILER_AR:FILEPATH=/home/runner/work/_temp/48433a4c-a34a-44dd-b701-3c783fb71764/emsdk-master/upstream/emscripten/emar
+CMAKE_CXX_COMPILER_AR:FILEPATH=/home/runner/work/_temp/07955eed-30c7-4f86-81ce-eecf247fa329/emsdk-master/upstream/emscripten/emar
 
 //`clang-scan-deps` dependency scanner
 CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS:FILEPATH=/usr/bin/clang-scan-deps-13
 
 //Emscripten ranlib
-CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/home/runner/work/_temp/48433a4c-a34a-44dd-b701-3c783fb71764/emsdk-master/upstream/emscripten/emranlib
+CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/home/runner/work/_temp/07955eed-30c7-4f86-81ce-eecf247fa329/emsdk-master/upstream/emscripten/emranlib
 
 //Flags used by the CXX compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
@@ -55,16 +55,16 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //C compiler
-CMAKE_C_COMPILER:STRING=/home/runner/work/_temp/48433a4c-a34a-44dd-b701-3c783fb71764/emsdk-master/upstream/emscripten/emcc
+CMAKE_C_COMPILER:STRING=/home/runner/work/_temp/07955eed-30c7-4f86-81ce-eecf247fa329/emsdk-master/upstream/emscripten/emcc
 
 //Emscripten ar
-CMAKE_C_COMPILER_AR:FILEPATH=/home/runner/work/_temp/48433a4c-a34a-44dd-b701-3c783fb71764/emsdk-master/upstream/emscripten/emar
+CMAKE_C_COMPILER_AR:FILEPATH=/home/runner/work/_temp/07955eed-30c7-4f86-81ce-eecf247fa329/emsdk-master/upstream/emscripten/emar
 
 //`clang-scan-deps` dependency scanner
 CMAKE_C_COMPILER_CLANG_SCAN_DEPS:FILEPATH=/usr/bin/clang-scan-deps-13
 
 //Emscripten ranlib
-CMAKE_C_COMPILER_RANLIB:FILEPATH=/home/runner/work/_temp/48433a4c-a34a-44dd-b701-3c783fb71764/emsdk-master/upstream/emscripten/emranlib
+CMAKE_C_COMPILER_RANLIB:FILEPATH=/home/runner/work/_temp/07955eed-30c7-4f86-81ce-eecf247fa329/emsdk-master/upstream/emscripten/emranlib
 
 //Flags used by the C compiler during all build types.
 CMAKE_C_FLAGS:STRING=
@@ -153,7 +153,7 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 CMAKE_PROJECT_NAME:STATIC=TemplateApp
 
 //Emscripten ranlib
-CMAKE_RANLIB:FILEPATH=/home/runner/work/_temp/48433a4c-a34a-44dd-b701-3c783fb71764/emsdk-master/upstream/emscripten/emranlib
+CMAKE_RANLIB:FILEPATH=/home/runner/work/_temp/07955eed-30c7-4f86-81ce-eecf247fa329/emsdk-master/upstream/emscripten/emranlib
 
 //Path to a program.
 CMAKE_READELF:FILEPATH=/usr/bin/readelf
@@ -212,7 +212,7 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 
 //The CMake toolchain file
-CMAKE_TOOLCHAIN_FILE:FILEPATH=/home/runner/work/_temp/48433a4c-a34a-44dd-b701-3c783fb71764/emsdk-master/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake
+CMAKE_TOOLCHAIN_FILE:FILEPATH=/home/runner/work/_temp/07955eed-30c7-4f86-81ce-eecf247fa329/emsdk-master/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake
 
 //Print options and variables.
 CMAKE_VERBOSE:BOOL=ON
@@ -258,6 +258,17 @@ EMSCRIPTEN_FORCE_COMPILERS:BOOL=ON
 // If disabled (default), UNIX ar archives (.a) are generated.
 EMSCRIPTEN_GENERATE_BITCODE_STATIC_LIBRARIES:BOOL=OFF
 
+//Build the exciton examples
+EXE_BUILD_EXAMPLES:BOOL=OFF
+
+//Build the exciton performance tests
+EXE_BUILD_PERFORMANCE_TESTS:BOOL=OFF
+
+//Build the exciton unit tests
+EXE_BUILD_UNIT_TESTS:BOOL=OFF
+
+EXE_MAIN_APP:BOOL=OFF
+
 //Directory under which to collect all populated content
 FETCHCONTENT_BASE_DIR:PATH=/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps
 
@@ -287,16 +298,6 @@ GIT_EXECUTABLE:FILEPATH=/usr/bin/git
 //Value Computed by CMake
 TemplateApp_BINARY_DIR:STATIC=/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build
 
-//We are running on CI. May change certain defaults.
-TemplateApp_CI:BOOL=OFF
-
-//Download CPM. Disable if you're providing your own version of
-// CPM
-TemplateApp_DOWNLOAD_CPM:BOOL=ON
-
-//Build the TemplateApp tests
-TemplateApp_EXAMPLES:BOOL=ON
-
 //Enable cmake install for the target
 TemplateApp_INSTALL:BOOL=ON
 
@@ -307,19 +308,19 @@ TemplateApp_IS_TOP_LEVEL:STATIC=ON
 TemplateApp_SOURCE_DIR:STATIC=/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp
 
 //Treat warnings as errors
-TemplateApp_WARNINGS_AS_ERRORS:BOOL=OFF
-
-//Treat warnings as errors
 WARNINGS_AS_ERRORS:BOOL=ON
 
 //Value Computed by CMake
 exciton_BINARY_DIR:STATIC=/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/exe
 
+//Enable cmake install for the target
+exciton_INSTALL:BOOL=OFF
+
 //Value Computed by CMake
 exciton_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-exciton_SOURCE_DIR:STATIC=/home/runner/work/emscripten-github/emscripten-github/engine/exe
+exciton_SOURCE_DIR:STATIC=/home/runner/work/emscripten-github/emscripten-github/exe
 
 
 ########################
@@ -424,7 +425,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

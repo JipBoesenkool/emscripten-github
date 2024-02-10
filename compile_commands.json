@@ -1,67 +1,61 @@
 [
 {
   "directory": "/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build",
-  "command": "/home/runner/work/_temp/48433a4c-a34a-44dd-b701-3c783fb71764/emsdk-master/upstream/emscripten/em++ -I/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/src/public -I/home/runner/work/emscripten-github/emscripten-github/engine/exe/src/public -isystem /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src -O3 -DNDEBUG -std=c++20 -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -Wdouble-promotion -Wformat=2 -Werror -sUSE_SDL=2 -sUSE_FREETYPE=1 -o CMakeFiles/TemplateApp.dir/src/main.cpp.o -c /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/src/main.cpp",
+  "command": "/home/runner/work/_temp/07955eed-30c7-4f86-81ce-eecf247fa329/emsdk-master/upstream/emscripten/em++ -I/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/src/public -I/home/runner/work/emscripten-github/emscripten-github/exe/src/public -isystem /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src -O3 -DNDEBUG -std=c++20 -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -Wdouble-promotion -Wformat=2 -Werror -sUSE_SDL=2 -sUSE_FREETYPE=1 -o CMakeFiles/TemplateApp.dir/src/main.cpp.o -c /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/src/main.cpp",
   "file": "/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/src/main.cpp",
   "output": "CMakeFiles/TemplateApp.dir/src/main.cpp.o"
 },
 {
   "directory": "/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build",
-  "command": "/home/runner/work/_temp/48433a4c-a34a-44dd-b701-3c783fb71764/emsdk-master/upstream/emscripten/emcc -isystem /home/runner/work/emscripten-github/emscripten-github/libs -O3 -DNDEBUG -w -o libs/CMakeFiles/glad.dir/glad/glad.c.o -c /home/runner/work/emscripten-github/emscripten-github/libs/glad/glad.c",
-  "file": "/home/runner/work/emscripten-github/emscripten-github/libs/glad/glad.c",
-  "output": "libs/CMakeFiles/glad.dir/glad/glad.c.o"
+  "command": "/home/runner/work/_temp/07955eed-30c7-4f86-81ce-eecf247fa329/emsdk-master/upstream/emscripten/em++ -I/home/runner/work/emscripten-github/emscripten-github/exe/src/public -O3 -DNDEBUG -std=c++20 -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -Wdouble-promotion -Wformat=2 -Werror -o exe/src/CMakeFiles/exe.dir/private/Library.cpp.o -c /home/runner/work/emscripten-github/emscripten-github/exe/src/private/Library.cpp",
+  "file": "/home/runner/work/emscripten-github/emscripten-github/exe/src/private/Library.cpp",
+  "output": "exe/src/CMakeFiles/exe.dir/private/Library.cpp.o"
 },
 {
   "directory": "/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build",
-  "command": "/home/runner/work/_temp/48433a4c-a34a-44dd-b701-3c783fb71764/emsdk-master/upstream/emscripten/em++ -I/home/runner/work/emscripten-github/emscripten-github/engine/exe/src/public -O3 -DNDEBUG -std=c++20 -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -Wdouble-promotion -Wformat=2 -o exe/src/CMakeFiles/exe.dir/public/exe/Library.cpp.o -c /home/runner/work/emscripten-github/emscripten-github/engine/exe/src/public/exe/Library.cpp",
-  "file": "/home/runner/work/emscripten-github/emscripten-github/engine/exe/src/public/exe/Library.cpp",
-  "output": "exe/src/CMakeFiles/exe.dir/public/exe/Library.cpp.o"
-},
-{
-  "directory": "/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build",
-  "command": "/home/runner/work/_temp/48433a4c-a34a-44dd-b701-3c783fb71764/emsdk-master/upstream/emscripten/em++ -isystem /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src -O3 -DNDEBUG -sUSE_SDL=2 -sUSE_FREETYPE=1 -w -o src/CMakeFiles/imgui.dir/__/_deps/imgui-src/imgui.cpp.o -c /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src/imgui.cpp",
+  "command": "/home/runner/work/_temp/07955eed-30c7-4f86-81ce-eecf247fa329/emsdk-master/upstream/emscripten/em++ -isystem /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src -O3 -DNDEBUG -sUSE_SDL=2 -sUSE_FREETYPE=1 -w -o src/CMakeFiles/imgui.dir/__/_deps/imgui-src/imgui.cpp.o -c /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src/imgui.cpp",
   "file": "/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src/imgui.cpp",
   "output": "src/CMakeFiles/imgui.dir/__/_deps/imgui-src/imgui.cpp.o"
 },
 {
   "directory": "/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build",
-  "command": "/home/runner/work/_temp/48433a4c-a34a-44dd-b701-3c783fb71764/emsdk-master/upstream/emscripten/em++ -isystem /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src -O3 -DNDEBUG -sUSE_SDL=2 -sUSE_FREETYPE=1 -w -o src/CMakeFiles/imgui.dir/__/_deps/imgui-src/imgui_demo.cpp.o -c /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src/imgui_demo.cpp",
+  "command": "/home/runner/work/_temp/07955eed-30c7-4f86-81ce-eecf247fa329/emsdk-master/upstream/emscripten/em++ -isystem /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src -O3 -DNDEBUG -sUSE_SDL=2 -sUSE_FREETYPE=1 -w -o src/CMakeFiles/imgui.dir/__/_deps/imgui-src/imgui_demo.cpp.o -c /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src/imgui_demo.cpp",
   "file": "/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src/imgui_demo.cpp",
   "output": "src/CMakeFiles/imgui.dir/__/_deps/imgui-src/imgui_demo.cpp.o"
 },
 {
   "directory": "/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build",
-  "command": "/home/runner/work/_temp/48433a4c-a34a-44dd-b701-3c783fb71764/emsdk-master/upstream/emscripten/em++ -isystem /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src -O3 -DNDEBUG -sUSE_SDL=2 -sUSE_FREETYPE=1 -w -o src/CMakeFiles/imgui.dir/__/_deps/imgui-src/imgui_draw.cpp.o -c /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src/imgui_draw.cpp",
+  "command": "/home/runner/work/_temp/07955eed-30c7-4f86-81ce-eecf247fa329/emsdk-master/upstream/emscripten/em++ -isystem /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src -O3 -DNDEBUG -sUSE_SDL=2 -sUSE_FREETYPE=1 -w -o src/CMakeFiles/imgui.dir/__/_deps/imgui-src/imgui_draw.cpp.o -c /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src/imgui_draw.cpp",
   "file": "/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src/imgui_draw.cpp",
   "output": "src/CMakeFiles/imgui.dir/__/_deps/imgui-src/imgui_draw.cpp.o"
 },
 {
   "directory": "/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build",
-  "command": "/home/runner/work/_temp/48433a4c-a34a-44dd-b701-3c783fb71764/emsdk-master/upstream/emscripten/em++ -isystem /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src -O3 -DNDEBUG -sUSE_SDL=2 -sUSE_FREETYPE=1 -w -o src/CMakeFiles/imgui.dir/__/_deps/imgui-src/imgui_tables.cpp.o -c /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src/imgui_tables.cpp",
+  "command": "/home/runner/work/_temp/07955eed-30c7-4f86-81ce-eecf247fa329/emsdk-master/upstream/emscripten/em++ -isystem /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src -O3 -DNDEBUG -sUSE_SDL=2 -sUSE_FREETYPE=1 -w -o src/CMakeFiles/imgui.dir/__/_deps/imgui-src/imgui_tables.cpp.o -c /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src/imgui_tables.cpp",
   "file": "/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src/imgui_tables.cpp",
   "output": "src/CMakeFiles/imgui.dir/__/_deps/imgui-src/imgui_tables.cpp.o"
 },
 {
   "directory": "/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build",
-  "command": "/home/runner/work/_temp/48433a4c-a34a-44dd-b701-3c783fb71764/emsdk-master/upstream/emscripten/em++ -isystem /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src -O3 -DNDEBUG -sUSE_SDL=2 -sUSE_FREETYPE=1 -w -o src/CMakeFiles/imgui.dir/__/_deps/imgui-src/imgui_widgets.cpp.o -c /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src/imgui_widgets.cpp",
+  "command": "/home/runner/work/_temp/07955eed-30c7-4f86-81ce-eecf247fa329/emsdk-master/upstream/emscripten/em++ -isystem /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src -O3 -DNDEBUG -sUSE_SDL=2 -sUSE_FREETYPE=1 -w -o src/CMakeFiles/imgui.dir/__/_deps/imgui-src/imgui_widgets.cpp.o -c /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src/imgui_widgets.cpp",
   "file": "/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src/imgui_widgets.cpp",
   "output": "src/CMakeFiles/imgui.dir/__/_deps/imgui-src/imgui_widgets.cpp.o"
 },
 {
   "directory": "/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build",
-  "command": "/home/runner/work/_temp/48433a4c-a34a-44dd-b701-3c783fb71764/emsdk-master/upstream/emscripten/em++ -isystem /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src -O3 -DNDEBUG -sUSE_SDL=2 -sUSE_FREETYPE=1 -w -o src/CMakeFiles/imgui.dir/__/_deps/imgui-src/backends/imgui_impl_sdl.cpp.o -c /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src/backends/imgui_impl_sdl.cpp",
+  "command": "/home/runner/work/_temp/07955eed-30c7-4f86-81ce-eecf247fa329/emsdk-master/upstream/emscripten/em++ -isystem /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src -O3 -DNDEBUG -sUSE_SDL=2 -sUSE_FREETYPE=1 -w -o src/CMakeFiles/imgui.dir/__/_deps/imgui-src/backends/imgui_impl_sdl.cpp.o -c /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src/backends/imgui_impl_sdl.cpp",
   "file": "/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src/backends/imgui_impl_sdl.cpp",
   "output": "src/CMakeFiles/imgui.dir/__/_deps/imgui-src/backends/imgui_impl_sdl.cpp.o"
 },
 {
   "directory": "/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build",
-  "command": "/home/runner/work/_temp/48433a4c-a34a-44dd-b701-3c783fb71764/emsdk-master/upstream/emscripten/em++ -isystem /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src -O3 -DNDEBUG -sUSE_SDL=2 -sUSE_FREETYPE=1 -w -o src/CMakeFiles/imgui.dir/__/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.o -c /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src/backends/imgui_impl_opengl3.cpp",
+  "command": "/home/runner/work/_temp/07955eed-30c7-4f86-81ce-eecf247fa329/emsdk-master/upstream/emscripten/em++ -isystem /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src -O3 -DNDEBUG -sUSE_SDL=2 -sUSE_FREETYPE=1 -w -o src/CMakeFiles/imgui.dir/__/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.o -c /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src/backends/imgui_impl_opengl3.cpp",
   "file": "/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src/backends/imgui_impl_opengl3.cpp",
   "output": "src/CMakeFiles/imgui.dir/__/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.o"
 },
 {
   "directory": "/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build",
-  "command": "/home/runner/work/_temp/48433a4c-a34a-44dd-b701-3c783fb71764/emsdk-master/upstream/emscripten/em++ -I/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/src/public -I/home/runner/work/emscripten-github/emscripten-github/engine/exe/src/public -isystem /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src -O3 -DNDEBUG -std=c++20 -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -Wdouble-promotion -Wformat=2 -Werror -sUSE_SDL=2 -sUSE_FREETYPE=1 -o src/CMakeFiles/TemplateApp_object.dir/private/Game.cpp.o -c /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/src/private/Game.cpp",
+  "command": "/home/runner/work/_temp/07955eed-30c7-4f86-81ce-eecf247fa329/emsdk-master/upstream/emscripten/em++ -I/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/src/public -I/home/runner/work/emscripten-github/emscripten-github/exe/src/public -isystem /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/build/_deps/imgui-src -O3 -DNDEBUG -std=c++20 -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -Wdouble-promotion -Wformat=2 -Werror -sUSE_SDL=2 -sUSE_FREETYPE=1 -o src/CMakeFiles/TemplateApp_object.dir/private/Game.cpp.o -c /home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/src/private/Game.cpp",
   "file": "/home/runner/work/emscripten-github/emscripten-github/apps/TemplateApp/src/private/Game.cpp",
   "output": "src/CMakeFiles/TemplateApp_object.dir/private/Game.cpp.o"
 }

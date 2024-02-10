@@ -9,9 +9,6 @@
 /home/runner/work/emscripten-github/emscripten-github/instdir/./build/src/libimgui.a
 /home/runner/work/emscripten-github/emscripten-github/instdir/./build/src/cmake_install.cmake
 /home/runner/work/emscripten-github/emscripten-github/instdir/./build/compile_commands.json
-/home/runner/work/emscripten-github/emscripten-github/instdir/./build/libs/libglad.a
-/home/runner/work/emscripten-github/emscripten-github/instdir/./build/libs/CMakeFiles/glad.dir/glad/glad.c.o
-/home/runner/work/emscripten-github/emscripten-github/instdir/./build/libs/cmake_install.cmake
 /home/runner/work/emscripten-github/emscripten-github/instdir/./build/cpm-package-lock.cmake
 /home/runner/work/emscripten-github/emscripten-github/instdir/./build/CMakeFiles/TargetDirectories.txt
 /home/runner/work/emscripten-github/emscripten-github/instdir/./build/CMakeFiles/3.28.2/CMakeSystem.cmake
@@ -77,9 +74,9 @@
 /home/runner/work/emscripten-github/emscripten-github/instdir/./build/_deps/imgui-src/.git/hooks/pre-push.sample
 /home/runner/work/emscripten-github/emscripten-github/instdir/./build/_deps/imgui-src/.git/hooks/fsmonitor-watchman.sample
 /home/runner/work/emscripten-github/emscripten-github/instdir/./build/_deps/imgui-src/.git/config
-/home/runner/work/emscripten-github/emscripten-github/instdir/./build/_deps/imgui-src/.git/objects/pack/pack-86e6312d0c6614eab302170ccde7681c2d9e82ac.idx
-/home/runner/work/emscripten-github/emscripten-github/instdir/./build/_deps/imgui-src/.git/objects/pack/pack-86e6312d0c6614eab302170ccde7681c2d9e82ac.rev
-/home/runner/work/emscripten-github/emscripten-github/instdir/./build/_deps/imgui-src/.git/objects/pack/pack-86e6312d0c6614eab302170ccde7681c2d9e82ac.pack
+/home/runner/work/emscripten-github/emscripten-github/instdir/./build/_deps/imgui-src/.git/objects/pack/pack-d745ab21cc1908535c7eac21d5bc4c19faabed74.rev
+/home/runner/work/emscripten-github/emscripten-github/instdir/./build/_deps/imgui-src/.git/objects/pack/pack-d745ab21cc1908535c7eac21d5bc4c19faabed74.idx
+/home/runner/work/emscripten-github/emscripten-github/instdir/./build/_deps/imgui-src/.git/objects/pack/pack-d745ab21cc1908535c7eac21d5bc4c19faabed74.pack
 /home/runner/work/emscripten-github/emscripten-github/instdir/./build/_deps/imgui-src/.git/HEAD
 /home/runner/work/emscripten-github/emscripten-github/instdir/./build/_deps/imgui-src/.git/index
 /home/runner/work/emscripten-github/emscripten-github/instdir/./build/_deps/imgui-src/imconfig.h
@@ -278,10 +275,9 @@
 /home/runner/work/emscripten-github/emscripten-github/instdir/./build/build.ninja
 /home/runner/work/emscripten-github/emscripten-github/instdir/./build/.ninja_deps
 /home/runner/work/emscripten-github/emscripten-github/instdir/./build/CMakeCache.txt
-/home/runner/work/emscripten-github/emscripten-github/instdir/./build/exe/src/CMakeFiles/exe.dir/public/exe/Library.cpp.o
+/home/runner/work/emscripten-github/emscripten-github/instdir/./build/exe/src/CMakeFiles/exe.dir/private/Library.cpp.o
 /home/runner/work/emscripten-github/emscripten-github/instdir/./build/exe/src/libexe.a
 /home/runner/work/emscripten-github/emscripten-github/instdir/./build/exe/src/cmake_install.cmake
-/home/runner/work/emscripten-github/emscripten-github/instdir/./build/exe/libs/cmake_install.cmake
 /home/runner/work/emscripten-github/emscripten-github/instdir/./build/exe/cmake_install.cmake
 /home/runner/work/emscripten-github/emscripten-github/instdir/./build/TemplateApp.js
 /home/runner/work/emscripten-github/emscripten-github/instdir/./build/.ninja_log
