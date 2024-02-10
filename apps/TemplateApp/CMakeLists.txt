@@ -23,8 +23,7 @@ process_options(${TARGET_NAME} ${CMAKE_ROOT_DIR})
 ################################################################################
 # Dependencies
 ################################################################################
-add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/../../libs" "${CMAKE_CURRENT_BINARY_DIR}/libs")
-add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/../../engine/exe" "${CMAKE_CURRENT_BINARY_DIR}/exe")
+add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/../../exe" "${CMAKE_CURRENT_BINARY_DIR}/exe")
 ################################################################################
 # Project
 ################################################################################
@@ -42,15 +41,12 @@ if (${CMAKE_SYSTEM_NAME} MATCHES "Emscripten")
             SUFFIX ".html" #change to ".wasm" if you only want the wasm output
     )
 endif()
-################################################################################
-# Configure
-################################################################################
+# configure
 configure_target(${TARGET_NAME})
 set_target_warnings(${TARGET_NAME} "${WARNINGS_AS_ERRORS}")
-
 set_target_properties(${TARGET_NAME} PROPERTIES FOLDER apps/${TARGET_NAME})
 
-#TODO: install?
+#install
 if (${TARGET_NAME}_INSTALL)
     message(STATUS "${TARGET_NAME} Install Enabled")
     install(
@@ -59,5 +55,4 @@ if (${TARGET_NAME}_INSTALL)
     )
 endif()
 
-###################
 #TODO: copy over resources

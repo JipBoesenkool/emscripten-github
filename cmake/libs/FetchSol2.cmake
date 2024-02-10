@@ -17,7 +17,7 @@ if(lua_ADDED)
   target_include_directories(lua SYSTEM PUBLIC $<BUILD_INTERFACE:${lua_SOURCE_DIR}>)
 
   set_target_warnings_disabled(lua)
-  set_target_properties(lua PROPERTIES FOLDER dependencies)
+  set_target_properties(lua PROPERTIES FOLDER libs)
 
   source_group(TREE ${lua_SOURCE_DIR} FILES ${lua_sources})
 endif()

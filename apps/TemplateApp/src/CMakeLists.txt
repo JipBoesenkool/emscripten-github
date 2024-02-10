@@ -21,7 +21,7 @@ target_link_libraries(${TARGET_NAME}_object PUBLIC imgui)
 #Expose the interface
 target_include_directories(${TARGET_NAME}_object PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/public")
 
-#TODO: pull this into exciton pipeline
+#TODO: pull platform stuff into exciton pipeline
 if (${CMAKE_SYSTEM_NAME} MATCHES "Emscripten")
     target_link_options(${TARGET_NAME}_object PUBLIC "-sUSE_SDL=2" "-sUSE_FREETYPE=1")
 else()
@@ -29,9 +29,7 @@ else()
         target_link_libraries(${TARGET_NAME}_object PUBLIC "m" "atomic" "pthread")
     endif ()
 endif()
-################################################################################
-# Configure
-################################################################################
+# configure
 configure_target(${TARGET_NAME}_object)
 set_target_warnings(${TARGET_NAME}_object "${WARNINGS_AS_ERRORS}")
 set_target_properties(${TARGET_NAME}_object PROPERTIES FOLDER apps/${TARGET_NAME})

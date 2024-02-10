@@ -1,4 +1,5 @@
-include(SetSystemIncludes)
+include(project/SetSystemIncludes)
+include(project/CompilerWarnings)
 
 CPMAddPackage(
     NAME benchmark

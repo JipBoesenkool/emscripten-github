@@ -1,6 +1,7 @@
-include(SetSystemIncludes)
-include(CompilerWarnings)
+include(project/SetSystemIncludes)
+include(project/CompilerWarnings)
 
+#SDL2
 CPMAddPackage(
     NAME SDL2
     GITHUB_REPOSITORY libsdl-org/SDL

@@ -1,4 +1,4 @@
-include(SetSystemIncludes)
+include(project/SetSystemIncludes)
 
 CPMAddPackage(
     NAME doctest

@@ -1,5 +1,5 @@
-include(SetSystemIncludes)
-include(CompilerWarnings)
+include(project/SetSystemIncludes)
+include(project/CompilerWarnings)
 
 CPMAddPackage(
     NAME imgui

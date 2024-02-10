@@ -1,4 +1,4 @@
-include(CompilerWarnings)
+include(project/CompilerWarnings)
 
 if (NOT TARGET glad)
     # Prefer using cmake/FetchGLAD over this, if possible
