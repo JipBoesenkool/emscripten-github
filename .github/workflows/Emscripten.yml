@@ -128,6 +128,7 @@ jobs:
         shell: bash
         if: contains(matrix.config.name, 'emscripten')
         run: |
+          ls apps/${{ github.event.inputs.project }}/build/src 
           mv apps/${{ github.event.inputs.project }}/build/src/${{ github.event.inputs.project }}.html apps/${{ github.event.inputs.project }}/build/src/index.html
           rm -rf apps/${{ github.event.inputs.project }}/build/src/CMakeFiles
           rm -f apps/${{ github.event.inputs.project }}/build/src/cmake_install.cmake

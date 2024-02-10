@@ -23,10 +23,10 @@ target_include_directories(${TARGET_NAME}_object PUBLIC "${CMAKE_CURRENT_SOURCE_
 
 #TODO: pull this into exciton pipeline
 if (${CMAKE_SYSTEM_NAME} MATCHES "Emscripten")
-    target_link_options(${CMAKE_PROJECT_NAME}_object PUBLIC "-sUSE_SDL=2" "-sUSE_FREETYPE=1")
+    target_link_options(${TARGET_NAME}_object PUBLIC "-sUSE_SDL=2" "-sUSE_FREETYPE=1")
 else()
     if (UNIX AND NOT APPLE)
-        target_link_libraries(${CMAKE_PROJECT_NAME}_object PUBLIC "m" "atomic" "pthread")
+        target_link_libraries(${TARGET_NAME}_object PUBLIC "m" "atomic" "pthread")
     endif ()
 endif()
 ################################################################################

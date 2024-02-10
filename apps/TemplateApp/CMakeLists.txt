@@ -37,7 +37,7 @@ target_link_libraries(${TARGET_NAME} PUBLIC ${TARGET_NAME}_object)
 #TODO: pull this into a platform func
 if (${CMAKE_SYSTEM_NAME} MATCHES "Emscripten")
     set_target_properties(
-        ${CMAKE_PROJECT_NAME}
+        ${TARGET_NAME}
         PROPERTIES 
             SUFFIX ".html" #change to ".wasm" if you only want the wasm output
     )
@@ -48,13 +48,13 @@ endif()
 configure_target(${TARGET_NAME})
 set_target_warnings(${TARGET_NAME} "${WARNINGS_AS_ERRORS}")
 
-set_target_properties(${TARGET_NAME} PROPERTIES FOLDER apps/${TARGET_NAME})
+#set_target_properties(${TARGET_NAME} PROPERTIES FOLDER apps/${TARGET_NAME})
 
 #TODO: install?
-if (${CMAKE_PROJECT_NAME}_INSTALL)
-    message(STATUS "${CMAKE_PROJECT_NAME} Install Enabled")
+if (${TARGET_NAME}_INSTALL)
+    message(STATUS "${TARGET_NAME} Install Enabled")
     install(
-        DIRECTORY "$<TARGET_FILE_DIR:${CMAKE_PROJECT_NAME}>"
+        DIRECTORY "$<TARGET_FILE_DIR:${TARGET_NAME}>"
         DESTINATION "."
     )
 endif()
