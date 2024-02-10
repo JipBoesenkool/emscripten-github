@@ -34,20 +34,4 @@ endif()
 ################################################################################
 configure_target(${TARGET_NAME}_object)
 set_target_warnings(${TARGET_NAME}_object "${WARNINGS_AS_ERRORS}")
-
-
-add_executable(${TARGET_NAME} "main.cpp")
-add_executable(${TARGET_NAME}::${TARGET_NAME} ALIAS ${TARGET_NAME})
-target_link_libraries(${TARGET_NAME} PUBLIC ${TARGET_NAME}_object)
-
-if (${CMAKE_SYSTEM_NAME} MATCHES "Emscripten")
-    set_target_properties(
-        ${TARGET_NAME}
-        PROPERTIES 
-            SUFFIX ".html" #change to ".wasm" if you only want the wasm output
-    )
-endif()
-
-configure_target(${TARGET_NAME})
-set_target_warnings(${TARGET_NAME} "${WARNINGS_AS_ERRORS}")
-#set_target_properties(${TARGET_NAME}_object PROPERTIES FOLDER apps/${TARGET_NAME})
+set_target_properties(${TARGET_NAME}_object PROPERTIES FOLDER apps/${TARGET_NAME})

@@ -128,17 +128,17 @@ jobs:
         shell: bash
         if: contains(matrix.config.name, 'emscripten')
         run: |
-          ls apps/${{ github.event.inputs.project }}/build/src 
-          mv apps/${{ github.event.inputs.project }}/build/src/${{ github.event.inputs.project }}.html apps/${{ github.event.inputs.project }}/build/src/index.html
-          rm -rf apps/${{ github.event.inputs.project }}/build/src/CMakeFiles
-          rm -f apps/${{ github.event.inputs.project }}/build/src/cmake_install.cmake
+          ls apps/${{ github.event.inputs.project }}/build 
+          mv apps/${{ github.event.inputs.project }}/build/${{ github.event.inputs.project }}.html apps/${{ github.event.inputs.project }}/build/index.html
+          rm -rf apps/${{ github.event.inputs.project }}/build/CMakeFiles
+          rm -f apps/${{ github.event.inputs.project }}/build/cmake_install.cmake
 
       - name: Deploy Github Page
         uses: JamesIves/github-pages-deploy-action@4.1.4
         if: contains(matrix.config.name, 'emscripten')
         with:
           branch: gh-pages-${{ github.event.inputs.project }}
-          folder: apps/${{ github.event.inputs.project }}/build/src/
+          folder: apps/${{ github.event.inputs.project }}/build/
 
       - name: Pack
         shell: bash
