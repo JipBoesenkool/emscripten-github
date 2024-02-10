@@ -31,22 +31,22 @@ add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/../../engine/exe" "${CMAKE_CURRENT
 # build the object library
 add_subdirectory("src")
 
-add_executable(${TARGET_NAME} src/main.cpp)
-add_executable(${TARGET_NAME}::${TARGET_NAME} ALIAS ${TARGET_NAME})
-target_link_libraries(${TARGET_NAME} PUBLIC ${TARGET_NAME}_object)
+#add_executable(${TARGET_NAME} src/main.cpp)
+#add_executable(${TARGET_NAME}::${TARGET_NAME} ALIAS ${TARGET_NAME})
+#target_link_libraries(${TARGET_NAME} PUBLIC ${TARGET_NAME}_object)
 #TODO: pull this into a platform func
-if (${CMAKE_SYSTEM_NAME} MATCHES "Emscripten")
-    set_target_properties(
-        ${TARGET_NAME}
-        PROPERTIES 
-            SUFFIX ".html" #change to ".wasm" if you only want the wasm output
-    )
-endif()
+#if (${CMAKE_SYSTEM_NAME} MATCHES "Emscripten")
+#    set_target_properties(
+#        ${TARGET_NAME}
+#        PROPERTIES 
+#            SUFFIX ".html" #change to ".wasm" if you only want the wasm output
+#    )
+#endif()
 ################################################################################
 # Configure
 ################################################################################
-configure_target(${TARGET_NAME})
-set_target_warnings(${TARGET_NAME} "${WARNINGS_AS_ERRORS}")
+#configure_target(${TARGET_NAME})
+#set_target_warnings(${TARGET_NAME} "${WARNINGS_AS_ERRORS}")
 
 #set_target_properties(${TARGET_NAME} PROPERTIES FOLDER apps/${TARGET_NAME})
 
