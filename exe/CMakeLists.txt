@@ -2,8 +2,8 @@
 # Project
 ################################################################################
 cmake_minimum_required(VERSION 3.21)
-project(exciton)
-set(TARGET_NAME exciton)
+project(Exciton)
+set(TARGET_NAME Exciton)
 set(CMAKE_ROOT_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../cmake")
 ################################################################################
 # CMake functions
@@ -18,7 +18,7 @@ include(project/ConfigureTarget)
 init_options(${TARGET_NAME} ${CMAKE_ROOT_DIR})
 # Override options
 if( ${${TARGET_NAME}_IS_ROOT} )
-    message(STATUS "${TARGET_NAME} is root, overriding options")
+    message(STATUS "Exciton is root, overriding options")
     option(EXE_MAIN_APP "" ON)
 endif()
 #process the options

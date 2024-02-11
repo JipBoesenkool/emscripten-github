@@ -1,5 +1,8 @@
+################################################################################
+# Function: set_target_warnings
+# Description: Mutes/Unmutes the target
 # based on https://github.com/lefticus/cpp_starter_project/blob/master/cmake/CompilerWarnings.cmake
-
+################################################################################
 function(set_target_warnings target_name warnings_as_errors)
     set(MSVC_WARNINGS
         /W4     # Baseline reasonable warnings

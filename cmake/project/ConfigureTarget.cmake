@@ -1,3 +1,7 @@
+################################################################################
+# Function: configure_target
+# Description: Convience function to make sure all projects are compiled/exposed the same
+################################################################################
 function(configure_target target)
     set_property(TARGET ${target} PROPERTY CXX_STANDARD_REQUIRED TRUE)
     set_property(TARGET ${target} PROPERTY CXX_STANDARD 20)
