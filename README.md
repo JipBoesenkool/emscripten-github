@@ -6,3 +6,6 @@
 # TODO
 - exclude platform from main script, make them functions
 - Setup the other platforms because we can test them for free on this public repo
+
+# References
+- clean CMake - https://github.com/raysan5/raylib
